@@ -3,7 +3,7 @@
  * @param {string} message - The message you want to make exciting
  * @return {string} The message made exciting
  */
-const makeExciting = (message: string) => {
+const makeExciting = (message: string): string => {
   if (!message) return '';
   return `${message}!`;
 };
