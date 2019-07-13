@@ -1,6 +1,6 @@
 <template>
   <div class="hello">
-    <h1>{{ msg }}</h1>
+    <h1>{{ excitedMsg }}</h1>
     <p>
       For a guide and recipes on how to configure / customize this project,
       <br />
@@ -85,13 +85,21 @@
 
 <script lang="ts">
 import Vue from 'vue';
+import makeExciting from '../utils/makeExciting';
 
 export default Vue.extend({
   name: 'HelloWorld',
   props: {
+    /** The message to display */
     msg: {
       type: String,
       default: '',
+    },
+  },
+  computed: {
+    /** The message made more exciting */
+    excitedMsg(): string {
+      return makeExciting(this.msg);
     },
   },
 });
