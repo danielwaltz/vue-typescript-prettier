@@ -85,7 +85,7 @@
 
 <script lang="ts">
 import Vue from 'vue';
-import makeExciting from '../utils/makeExciting';
+import makeExciting from '@/utils/makeExciting';
 
 export default Vue.extend({
   name: 'HelloWorld',
