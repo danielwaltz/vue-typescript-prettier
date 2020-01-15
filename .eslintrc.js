@@ -6,11 +6,10 @@ module.exports = {
   extends: [
     'eslint:recommended',
     'plugin:@typescript-eslint/recommended',
-    'prettier/@typescript-eslint',
     'plugin:vue/recommended',
-    '@vue/standard',
     '@vue/typescript',
     '@vue/prettier',
+    'prettier/@typescript-eslint',
   ],
   rules: {
     'no-console': process.env.NODE_ENV === 'production' ? 'error' : 'off',
@@ -19,7 +18,5 @@ module.exports = {
   },
   parserOptions: {
     parser: '@typescript-eslint/parser',
-    project: './tsconfig.json',
-    tsconfigRootDir: __dirname,
   },
 };
