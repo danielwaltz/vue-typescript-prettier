@@ -84,10 +84,10 @@
 </template>
 
 <script lang="ts">
-import Vue from 'vue';
+import { computed, defineComponent } from 'vue';
 import makeExciting from '@/utils/makeExciting';
 
-export default Vue.extend({
+export default defineComponent({
   name: 'HelloWorld',
   props: {
     /** The message to display */
@@ -96,11 +96,10 @@ export default Vue.extend({
       default: '',
     },
   },
-  computed: {
+  setup(props) {
     /** The message made more exciting */
-    excitedMsg(): string {
-      return makeExciting(this.msg);
-    },
+    const excitedMsg = computed(() => makeExciting(props.msg));
+    return { excitedMsg };
   },
 });
 </script>
